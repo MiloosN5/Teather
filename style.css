@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400&display=swap');
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: 'Ubuntu', sans-serif;
+	color: black;
+}
+
+button {
+	cursor: pointer;
+}
+
+body {
+	height: 100%;
+	padding: 20px;
+	background: linear-gradient(90deg, rgba(52,56,79,1) 0%, rgba(134,194,207,1) 100%);
+}
+
+#title {
+	max-width: 80%;
+	color: white;
+	font-size: clamp(0.5rem, 4vw, 1.7rem);
+	text-align: center;
+	margin-inline: auto; 
+	letter-spacing: clamp(0.5rem, 4vw, 1.7rem);
+	/* white-space: nowrap; */
+	overflow: hidden;
+}
+
+/* MAIN */
+#wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	max-width: 80%;
+	padding: 0.5rem;
+	margin-inline: auto;
+}
+
+/* REPERTOIRE */
+#repertoire {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+				
+#repertoire h2 {
+	padding: 0.5rem;
+	font-size: max(min(1.5rem, 36px), 12px);
+	text-align: center;
+	background-color: white;
+}
+
+/* #repertoire__movies {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto;
+} */
+
+
+.repertoire__movie {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto;
+	width: 100%;
+	border-bottom: 1px solid gray;
+	background-color: white;
+}
+
+.repertoire__movie-image {
+	grid-column: 1/3;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-inline: 2px;
+	padding-top: 0.2rem;
+	padding-bottom: 0.2rem;
+}
+
+.repertoire__movie-image img {
+	width: max(min(8rem, 200px), 128px);
+	max-width: 90%;
+}
+
+.repertoire__movie-info {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	word-wrap: break-word;
+	padding: max(min(0.5rem, 10px), 4px);
+	font-size: max(min(1rem, 32px), 10px);
+	overflow: hidden;
+}
+
+.repertoire__movie-price > span {
+	color: #077dcc;
+	font-weight: bold;
+}
+
+.repertoire__movie-booking {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.repertoire__movie-booking input {
+	width: max(min(1.5rem, 46px), 10px + 20px);
+	height: max(min(1.5rem, 46px), 10px + 20px);
+	margin-right: max(min(0.1rem, 10px), 4px);
+	text-align: center;
+	border: 1px solid black;
+	font-size: max(min(1rem, 30px), 10px);
+}
+				
+.repertoire__movie-button {
+	height: max(min(1.5rem, 46px), 10px + 20px);
+	padding-inline: max(min(1rem, 6px), 4px);
+	background: linear-gradient(90deg, rgba(18,212,237,1) 0%, rgba(124,210,221,1) 100%);
+	font-size: max(min(1rem, 30px), 10px); 
+	border-radius: 10px;
+	border: none;
+}
+
+/* BOOKING */
+#booking {
+	margin-top: 0.5rem;
+	width: 100%;
+}
+
+#booking h2 {
+	padding: 0.5rem;
+	font-size: max(min(1.5rem, 36px), 12px);
+	text-align: center;
+	background-color: white;
+	white-space: nowrap;
+}
+
+#booking__movies {
+	height: auto;
+	min-height: 30px;
+	padding-top: 0.5rem;
+	background-color: #cee0e3;
+}
+#booking__total {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: auto;
+	background-color: #b6d4d8;
+	font-size: max(min(1rem, 30px), 10px);
+}
+
+/* get rid of spinner */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+/* Classes */
+.booking__removeBtn {
+	height: max(min(1.7rem, 60px), 16px + 20px);
+	padding-inline: max(min(1rem, 10px), 4px);
+	margin-inline: auto;
+	background: black;
+	border-radius: 20px;
+	color: white;
+	line-height: max(min(1rem, 30px), 10px);
+	font-size: max(min(1rem, 30px), 10px);
+}
+
+.booking__movie {
+	display: grid;
+	grid-template-columns: 1fr 2fr 1fr;
+	align-items: center;
+	margin-inline: 0.5rem;
+	padding-bottom: 0.5rem;
+	font-size: max(min(1rem, 30px), 10px);
+}
+
+
+
+@media(min-width: 700px) {
+	#repertoire {
+		max-width: max(min(25rem, 700px), 450px);
+	}
+
+	.repertoire__movie {
+		grid-template-columns: auto 2fr auto;
+	}
+
+	.repertoire__movie-image {
+		width: max(min(8rem, 200px), 96px);
+		grid-column: 1/1;
+	}
+
+	.repertoire__movie-image img {
+		width: max(min(8rem, 200px), 96px);
+	}
+
+	.repertoire__movie-booking {
+		flex-direction: column;
+		width: max(min(10rem, 140px), 100px); 
+	}
+
+	.repertoire__movie-booking input {
+		margin-right: 0;
+	}
+	
+	.repertoire__movie-button {
+		margin-top: max(min(0.1rem, 10px), 4px);
+	}
+
+	#booking {
+		max-width: max(min(25rem, 700px), 450px);
+	}
+
+}
+
+@media(min-width: 1000px){
+	#wrapper {
+		flex-direction: row;
+		width: auto;
+		max-width: max(min(100rem, 1600px), 600px);
+	}
+
+	#repertoire {
+		max-width: 70%;
+	}
+
+	#repertoire h2 {
+		margin-bottom: 1em;
+	}
+
+	#repertoire__movies {
+		display: grid;
+		max-width: 100%;
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.repertoire__movie {
+		max-width: 100%;
+		grid-template-columns: auto 1fr auto;
+		grid-template-rows: 180px;
+		border: none;
+	}
+
+	.repertoire__movie-image {
+		width: max(min(8rem, 120px), 96px);
+	}
+
+	.repertoire__movie-image img {
+		width: max(min(8rem, 120px), 96px);
+	}
+
+	#left-part-movies, #right-part-movies {
+		width: 100%;
+	} 
+
+	#booking {
+		margin-top: 0;
+		max-width: 30%;
+	}
+
+	#booking h2 {
+		margin-bottom: 1em;
+	}
+
+	#booking__movies {
+		width: auto;
+		height: 360px;
+	}
+
+	#booking__total {
+		height: 180px;
+	}
+} 

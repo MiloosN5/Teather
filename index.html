@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Teather</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+	<!-- HEADING -->
+	<h1 id="title">T E A T H E R</h1>
+
+	<!-- MAIN -->
+	<main id="wrapper">
+		<!--------------- REPERTOIRE --------------->
+		<section id="repertoire">
+			<h2>Movies</h2>
+			<div id="repertoire__movies">
+				<!--------------- MOVIE 1 --------------->
+				<div class="repertoire__movie">
+					<!------ IMAGE ------>
+					<div class="repertoire__movie-image">
+						<img src="img/movie_01small.jpg">
+					</div>
+					<!------ INFO ------>
+					<div class="repertoire__movie-info">
+						<h3>Fight Club</h3>
+						<p>★★★★☆</p>
+						<p class="repertoire__movie-price">Ticket: <span>$10</span></p>
+					</div>
+					<!------ BOOKING ------>
+					<div class="repertoire__movie-booking">
+						<input type="number" name="quantity" value="0" min="0">
+						<button class="repertoire__movie-button" onclick="addToCart(this)" >ADD</button>
+					</div>
+				</div>
+				<!--------------- MOVIE 2 --------------->
+				<div class="repertoire__movie">
+					<!------ IMAGE ------>
+					<div class="repertoire__movie-image">
+						<img src="img/movie_02small.jpg">
+					</div>
+					<!------ INFO ------>
+					<div class="repertoire__movie-info">
+						<h3>E.T.</h3>
+						<p>★★★★☆</p>
+						<p  class="repertoire__movie-price">Ticket: <span>$12</span></p>
+					</div>
+					<!------ BOOKING ------>
+					<div class="repertoire__movie-booking">
+						<input type="number" name="quantity" value="0" min="0">
+						<button class="repertoire__movie-button" onclick="addToCart(this)" >ADD</button>
+					</div>
+				</div>
+				<!--------------- MOVIE 3 --------------->
+				<div class="repertoire__movie">
+					<!------ IMAGE ------>
+					<div class="repertoire__movie-image">
+						<img src="img/movie_03small.jpg">
+					</div>
+					<!------ INFO ------>
+					<div class="repertoire__movie-info">
+						<h3>Captain Marvel</h3>
+						<p>★★★★☆</p>
+						<p  class="repertoire__movie-price">Ticket: <span>$22.5</span></p>
+					</div>
+					<!------ BOOKING ------>
+					<div class="repertoire__movie-booking">
+						<input type="number" name="quantity" value="0" min="0">
+						<button class="repertoire__movie-button" onclick="addToCart(this)" >ADD</button>
+					</div>
+				</div>
+				<!--------------- MOVIE 4 --------------->
+				<div class="repertoire__movie">
+					<!------ IMAGE ------>
+					<div class="repertoire__movie-image">
+						<img src="img/movie_04small.jpg">
+					</div>
+					<!------ INFO ------>
+					<div class="repertoire__movie-info">
+						<h3>Polis</h3>
+						<p>★★★★★</p>
+						<p  class="repertoire__movie-price">Ticket: <span>$17.2</span></p>
+					</div>
+					<!------ BOOKING ------>
+					<div class="repertoire__movie-booking">
+						<input type="number" name="quantity" value="0" min="0">
+						<button class="repertoire__movie-button" onclick="addToCart(this)" >ADD</button>
+					</div>
+				</div>
+				<!--------------- MOVIE 5 --------------->
+				<div class="repertoire__movie">
+					<!------ IMAGE ------>
+					<div class="repertoire__movie-image">
+						<img src="img/movie_05small.jpg">
+					</div>
+					<!------ INFO ------>
+					<div class="repertoire__movie-info">
+						<h3>Joker</h3>
+						<p>★★★★☆</p>
+						<p  class="repertoire__movie-price">Ticket: <span>$15.3</span></p>
+					</div>
+					<!------ BOOKING ------>
+					<div class="repertoire__movie-booking">
+						<input type="number" name="quantity" value="0" min="0" max="20">
+						<button class="repertoire__movie-button" onclick="addToCart(this)" >ADD</button>
+					</div>
+				</div>
+				<!--------------- MOVIE 6 --------------->
+				<div class="repertoire__movie">
+					<!------ IMAGE ------>
+					<div class="repertoire__movie-image">
+						<img src="img/movie_06small.jpg">
+					</div>
+					<!------ INFO ------>
+					<div class="repertoire__movie-info">
+						<h3>Annette</h3>
+						<p>★★★☆☆</p>
+						<p  class="repertoire__movie-price">Ticket: <span>$9.5</span></p>
+					</div>
+					<!------ BOOKING ------>
+					<div class="repertoire__movie-booking">
+						<input type="number" name="quantity" value="0" min="0">
+						<button class="repertoire__movie-button" onclick="addToCart(this)" >ADD</button>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--------------- BOOKING --------------->
+		<section id="booking">
+			<h2>Desire to watch</h2>
+			<div id="booking__movies"></div>
+			<div id="booking__total">
+				<p></p>
+			</div>
+		</section>
+	</main>
+
+	<!-- include exterior javascript file -->
+	<script src="script.js"></script>
+</body>
+</html>
